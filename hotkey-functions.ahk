@@ -43,9 +43,9 @@ else if (key = "equals") ; start Steam
 	}
 else if (key = "numLock") ; empty
     {}
-else if (key = "slash") ; start Spotify
+else if (key = "slash") ; start Spotify from taskbar
     SendInput, #5
-else if (key = "asterisk") ; start Discord 
+else if (key = "asterisk") ; start Discord from taskbar
 	SendInput, #9
 else if (key = "backspace") ; open closed captioning
     Run, https://cc.alejo.io/recorder
@@ -90,12 +90,12 @@ else if (key = "minus") ; starting soon in OBS
 			Sleep, 100
 			SendInput, {ctrl up}{7 up}
 	}
-else if (key = "num4") ; sound effect #1
-    Run, chrome.exe "https://google.com/"
-else if (key = "num5") ; sound effect #2
-    Run, https://google.com
-else if (key = "num6") ; sound effect #3
-    Run, https://google.com
+else if (key = "num4") ; empty
+    {}
+else if (key = "num5") ; empty
+    {}
+else if (key = "num6") ; empty
+    {}
 else if (key = "plus") ; start stream in OBS 
     {
 		#IfWinExist Streamlabs Desktop
@@ -107,12 +107,12 @@ else if (key = "plus") ; start stream in OBS
 			Sleep, 100
 			SendInput, {ctrl up}{2 up}
 	}
-else if (key = "num1") ; animation #1
-    Run, https://google.com
-else if (key = "num2") ; animation #2
-    Run, https://google.com
-else if (key = "num3") ; animation #3
-    Run, https://google.com
+else if (key = "num1") ; empty
+    {}
+else if (key = "num2") ; empty
+    {}
+else if (key = "num3") ; empty
+    {}
 else if (key = "enter") ; stop stream in OBS
     {
 		#IfWinExist Streamlabs Desktop
@@ -131,7 +131,7 @@ else if (key = "num0") ; create clip of last 20 seconds
 			Sleep, 100
 			SendInput, {ctrl up}{shift up}{s up}
 	}
-else if (key = "delete") ; pause stream in OBS
+else if (key = "period") ; pause stream in OBS
     {
 		#IfWinExist Streamlabs Desktop
 			SendInput, {ctrl down}{5 down} ; mute mic
@@ -143,4 +143,4 @@ else if (key = "delete") ; pause stream in OBS
 			SendInput, {ctrl up}{4 up}
 	}
 else
-    MsgBox, , Wuh-oh! This button is not yet assigned: %key%,
+    MsgBox, , Uh-oh! This button is not yet assigned: %key%,

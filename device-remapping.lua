@@ -1,12 +1,14 @@
+-- minimize this lua script to tray as it runs
 lmc.minimizeToTray = true
 lmc_minimize()
 
+-- set the device name and id
 lmc_device_set_name('streamdeck','2265F452')
 
 sendToAHK = function (key)
     print('It was assigned string:    ' .. key)
 
-    -- change the Users folder to your current user.
+    -- change the Users folder to the current user.
     local file = io.open("C:\\Users\\anaro\\Documents\\keypressed.txt", "w")
 
     file:write(key)
@@ -17,6 +19,7 @@ sendToAHK = function (key)
     lmc_send_keys('{F24}')
 end
 
+-- set keypad button names via their event id
 local config = {
     [27] = "escape",
     [183] = "calc",
@@ -37,9 +40,9 @@ local config = {
     [97]  = "num1",
     [98]  = "num2",
     [99]  = "num3",
-    -- [] = "enter",
-    -- [] = "num0",
-    -- [] = "delete",
+    [13] = "enter",
+    [96] = "num0",
+    [110] = "period",
 }
 
 -- define callback for whole device
