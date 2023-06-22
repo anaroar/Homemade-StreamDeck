@@ -26,7 +26,18 @@ You will also need to install [Lua Macros](http://www.hidmacros.eu/download.php)
 - 1/2" square [colored labels](https://www.amazon.com/gp/product/B08M9F8TSB/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) for the keys
 - (Optional) A [keycap puller](https://www.amazon.com/gp/product/B01HPC88HM/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) and a couple packs of [keycaps](https://www.amazon.com/gp/product/B00FZGETVU/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1)
 
-You don't neceessarily need to pull the old keys out and put new ones in, but I thought that more transparent keys would look better with a backlit keypad.  
+You don't necessarily need to pull the old keys out and put new ones in, but I thought that more transparent keys would look better with a backlit keypad.  
+
+## Keypad Setup
 
 ## How to Run
-(Coming soon)
+The scripts will run automatically once you add them to the Windows Startup folder. That way, the Stream Deck will be ready to use every time you power on your computer. To get them added, hit *Windows + R* to open the Run Command dialog box, and type *shell:startup* into the text box.
+
+![Windows + R](https://github.com/anaroar/Stream-Deck/assets/129563507/14ed38b7-a8ca-4f29-8c39-eb359fd551ca)
+
+This will open the Windows Startup folder, where you can add shortcuts to the paths that store your script files. Right-click inside the folder and select **New > Shortcut** to add both the Lua and AHK scripts.
+
+![Shell startup](https://github.com/anaroar/Stream-Deck/assets/129563507/42d97d45-2a8e-47a8-9767-acc9625e5c94)
+
+Now, the scripts should automatically run in the background the next time you restart your computer. If you need to change or update the hotkey functions, you can do so easily by right-clicking the AutoHotkey icon in your tray, pausing the script, and resuming again after the changes to your AHK script have been saved. 
+
