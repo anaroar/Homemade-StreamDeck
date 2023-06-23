@@ -1,4 +1,4 @@
-# Homemade Stream-Deck
+# Homemade Stream Deck
 ![streamdeck collage](https://github.com/anaroar/Stream-Deck/assets/129563507/d2414920-8a7c-4224-92f9-72d8dd7759a2)
 ## Overview
 This is a homemade stream deck that costs less than $50 to make. Using an external numeric keypad and some scripts, you can create your own macro keypad that can be used to automate a process or execute different commands on your computer. This one in particular is scripted to be able to do the following:
