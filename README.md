@@ -23,12 +23,37 @@ You will also need to install [Lua Macros](http://www.hidmacros.eu/download.php)
 - An external numeric keypad, like this [Rottay USB Wired Number Pad](https://www.amazon.com/gp/product/B07FFLNF5C/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 
 # Other Materials
-- 1/2" square [colored labels](https://www.amazon.com/gp/product/B08M9F8TSB/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) for the keys
+- 1/2" square [colored labels](https://www.amazon.com/gp/product/B08M9F8TSB/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) to put over the keys
+  - Alternatively, you can design and print your own labels using Elgato's [stream deck key creator](https://www.elgato.com/us/en/s/keycreator)
 - (Optional) A [keycap puller](https://www.amazon.com/gp/product/B01HPC88HM/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) and a couple packs of [keycaps](https://www.amazon.com/gp/product/B00FZGETVU/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1)
 
-You don't necessarily need to pull the old keys out and put new ones in, but I thought that more transparent keys would look better with a backlit keypad.  
+You don't necessarily need to pull the old keys out and put new ones in, but it does look cool to have transparent keys on top of a backlit keypad.  
 
 ## Keypad Setup
+First, plug in your external keypad. You need to replace the device id number in the Lua script with your own.
+
+![Lua device id](https://github.com/anaroar/Stream-Deck/assets/129563507/b54b903b-47f6-484b-8cd4-355c688d809a)
+
+You can find your device id number by opening the Device Manager on your PC, expanding the *Keyboards* drop-down, and right-clicking on the device that you just added (if you're not sure or they're all labeled the same, you can look at the timestamp under the *Events* tab. It will be the one marked with the current date and time). 
+
+The id number you need to copy/paste into the Lua script is usually a string of alphanumeric characters stuck between two ampersands.
+
+![Device manager](https://github.com/anaroar/Stream-Deck/assets/129563507/89639c6c-e8c3-407c-a63f-b3e93b5b3175)
+
+In the Lua script, you will need to make a few more changes:
+- Set the path for the *Users* folder to your PC's current user
+- Set each individual key on the external keypad with a name and its event id number
+
+![Lua path and number ids](https://github.com/anaroar/Stream-Deck/assets/129563507/594aa1ce-03c3-4b5e-be06-12adc0024662)
+
+You can find the event id number of each key using HID Macros. Once opened and on the *Macros* tab, it will display the event id of whichever button was last pressed, followed by the corresponding keypad button in parentheses. For example, in the following image, the number *5* button was the last button pressed, and its event id number is *101*.
+
+![HID macros](https://github.com/anaroar/Stream-Deck/assets/129563507/2dd3cc0c-184e-471f-a5fd-01f96e96fc8b)
+
+Once you make these adjustments to the Lua script, your stream deck should be functional and ready to run.
+
+### Macro Setup
+
 
 ## How to Run
 The scripts will run automatically once you add them to the Windows Startup folder. That way, the Stream Deck will be ready to use every time you power on your computer. To get them added, hit *Windows + R* to open the Run Command dialog box, and type *shell:startup* into the text box.
